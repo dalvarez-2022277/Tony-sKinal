@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #5e8583;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoalvarez.controller.TipoEmpleadoController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99bbb9" height="383.0" layoutX="27.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 54;" width="105.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#647c84" height="88.0" layoutX="32.0" layoutY="91.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 50; -fx-arc-height: 50;" width="97.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cbeba" height="51.0" layoutX="35.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 50; -fx-arc-height: 50;" width="97.0" />
+      <Text fill="#f6fafb" layoutX="45.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Empleado" textAlignment="CENTER" wrappingWidth="76.888671875">
+         <font>
+            <Font name="Eras Light ITC" size="18.0" />
+         </font>
+      </Text>
+      <VBox layoutX="27.0" layoutY="196.0" prefHeight="158.0" prefWidth="105.0">
+         <children>
+            <Button fx:id="btnNuevo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="39.0" prefWidth="110.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="34.0" fitWidth="29.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Agregar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#eiliminar" prefHeight="39.0" prefWidth="107.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="34.0" fitWidth="29.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnEditar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="39.0" prefWidth="106.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Editar">
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="34.0" fitWidth="29.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnReporte" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="39.0" prefWidth="107.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Reporte">
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="34.0" fitWidth="29.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99bbb9" height="275.0" layoutX="172.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 54;" width="444.0" />
+      <GridPane layoutX="195.0" layoutY="108.0" prefHeight="88.0" prefWidth="397.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="98.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="0.0" prefWidth="112.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="82.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="106.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#f6fafb" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo TipoEmpelado" textAlignment="CENTER" wrappingWidth="92.888671875" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Eras Light ITC" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtCodigoTipoEmpleado" editable="false" prefHeight="25.0" prefWidth="106.0" GridPane.columnIndex="1" />
+            <Text fill="#f6fafb" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" textAlignment="CENTER" wrappingWidth="74.888671875" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Eras Light ITC" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtDescripcionTipoEmpleado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblTipoEmpleado" layoutX="177.0" layoutY="200.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="166.0" prefWidth="434.0">
+         <columns>
+            <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="219.0" text="Codigo TipoEmpleado" />
+            <TableColumn fx:id="colDescripcionTipoEmpleado" prefWidth="214.0" text="Descripcion" />
+         </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e6763" height="10.0" layoutX="203.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 400;" width="427.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cbeba" height="10.0" layoutX="381.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 400;" width="249.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#64b4b8" height="10.0" layoutX="508.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 400;" width="122.0" />
+      <ImageView fitHeight="72.0" fitWidth="97.0" layoutX="34.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/LogoPrincipal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="65.0" layoutY="354.0" onMouseClicked="#tipoEmpleadoMenuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Salir.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

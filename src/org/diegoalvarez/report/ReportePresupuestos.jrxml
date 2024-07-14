@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuestos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5bb541fb-bc6f-4319-aaed-72fbe85f7169">
+	<property name="ireport.zoom" value="1.331000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="292"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\TheDrake\\Documents\\NetBeansProjects\\TonysKinal2023_2022277_v1.0\\src\\org\\diegoalvarez\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUEVA_IMAGEN" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from Empresas E Inner join Servicios S on
+ E.codigoEmpresa = S.codigoEmpresa where E.codigoEmpresa = $P{codEmpresa}]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="218" y="0" width="354" height="8" forecolor="#3E6763" backcolor="#3E6763" uuid="8d67d94b-6263-49df-86d2-df4545bf27b1"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="280" y="19" width="292" height="8" forecolor="#7CBEBA" backcolor="#7CBEBA" uuid="a1e3e691-327a-47dc-adfe-232ed4fd99de"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="420" y="40" width="152" height="8" forecolor="#64B4B8" backcolor="#7CBEBA" uuid="75fa290b-299f-4a4d-a742-54886c0926de"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="161" splitType="Stretch">
+			<textField>
+				<reportElement x="141" y="56" width="100" height="20" uuid="3d93192b-20b2-4d5a-bb25-c0bee329dd44"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="86" width="100" height="20" uuid="92bbec8b-520c-4680-b357-7fe7712e1742"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="116" width="100" height="20" uuid="0f8be5e6-d6d2-4008-9362-616f6e8d2dd7"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="265" y="45" width="293" height="71" uuid="cd54b5fc-b041-4bbb-aeab-cafb45fa9377"/>
+				<subreportParameter name="codEmpresa">
+					<subreportParameterExpression><![CDATA[$F{codigoEmpresa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReportesPresupuestos.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="10" y="56" width="111" height="20" uuid="7ccd1ea6-236b-4d58-b161-81542a62d6ae"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Nombre de la Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="86" width="111" height="20" uuid="6da2bb81-777c-4982-aca3-e5c619f195cd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="116" width="111" height="20" uuid="d4f25904-15a8-458b-a6d4-095fd1f6ac79"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<elementGroup/>
+			<line>
+				<reportElement x="0" y="158" width="569" height="3" forecolor="#7CBEBA" uuid="970b63a5-78f6-407b-93ec-f284b376d62d"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="204" y="29" width="134" height="33" uuid="93297b2f-5e35-4db2-baa8-3c4a9471114e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light" size="12"/>
+				</textElement>
+				<text><![CDATA[Presupuestos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="2" width="100" height="20" uuid="468ab4d3-0103-48a7-bded-a6c80b257f09"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Fecha de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="100" height="20" uuid="85c3ed7b-d452-497f-bb37-00075e40d961"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Hora Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="2" width="100" height="20" uuid="123f55f6-2791-441e-b19e-ed1662508dac"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Lugar Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="2" width="100" height="20" uuid="bb7b2b16-ee31-46e2-adad-df4c1c15c5ff"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Telefono Contacto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="21" y="0" width="100" height="20" uuid="6aab1266-db06-40f3-a97a-014eda9c41ba"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="141" y="0" width="100" height="20" uuid="1cde864d-9144-41bc-ac7f-48e85cce7334"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="0" width="100" height="20" uuid="a7f1c235-f5e6-4fa2-be1e-c665f533660c"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="0" width="100" height="20" uuid="bde713c1-ab19-4131-964c-38fab5f65dca"/>
+				<textElement>
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

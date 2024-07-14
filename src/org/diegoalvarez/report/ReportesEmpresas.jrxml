@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportesEmpresas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f7caf635-8737-48e1-af3c-54cddf8926c9">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="480"/>
+	<parameter name="NUEVA_IMAGEN1" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[call sp_listarEmpresas]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="201" y="0" width="354" height="8" forecolor="#3E6763" backcolor="#3E6763" uuid="714e70a9-6fb2-4c48-825b-97ffdf880cac"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="263" y="19" width="292" height="8" forecolor="#7CBEBA" backcolor="#7CBEBA" uuid="52602a86-2aca-4db4-8764-9f25d1af6b8e"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="403" y="38" width="152" height="8" forecolor="#64B4B8" backcolor="#7CBEBA" uuid="ecfd73ae-e5a6-4d3c-a0aa-c0e71d91e2ab"/>
+			</rectangle>
+			<image>
+				<reportElement x="34" y="80" width="417" height="259" uuid="820f4e48-e67f-4382-ae39-f89d5652ceb9"/>
+				<imageExpression><![CDATA[$P{NUEVA_IMAGEN1}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<staticText>
+				<reportElement x="197" y="48" width="147" height="42" uuid="18818ad3-b598-476e-9ae8-b8ef238d52cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Yu Gothic Light" size="14"/>
+				</textElement>
+				<text><![CDATA[Empresas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="0" width="100" height="20" uuid="3bdd066c-8b2c-4b07-a530-6dec3a63bde5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Codigo Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="0" width="100" height="20" uuid="0a7b466d-23a9-40ec-9adc-4873d6cd24bd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="0" width="100" height="20" uuid="6223d0cc-0f81-4d10-90dc-ccb7e6994c86"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="0" width="100" height="20" uuid="f2f8d154-1c47-43f9-8fe1-baa27756f609"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="0" width="100" height="20" uuid="66926ed6-b02f-428b-a3d7-f9066f838c0b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="3" forecolor="#7CBEBA" uuid="2d5d5225-588e-4a73-8adf-154f76c7b9f4"/>
+			</line>
+			<textField>
+				<reportElement x="128" y="3" width="100" height="20" uuid="dfabb604-e7cf-429c-aa5d-caf66952f609"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="3" width="100" height="20" uuid="4039ccfa-ab57-4efc-b957-3908d3782cbd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="3" width="100" height="20" uuid="86c8a4fb-b6b1-4e11-b357-46d8193cfd82"/>
+				<textElement textAlignment="Center">
+					<font fontName="Yu Gothic Light"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="10" y="10" width="555" height="3" forecolor="#7CBEBA" uuid="728f5929-af1d-4b62-b9eb-bc25febcf1d3"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #5e8583;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoalvarez.controller.ProgramadorController">
+   <children>
+      <Pane layoutX="14.0" layoutY="13.0" prefHeight="375.0" prefWidth="192.0" style="-fx-background-color: #99bbb9;">
+         <children>
+            <ImageView fitHeight="173.0" fitWidth="158.0" layoutX="17.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Foto%20Diego%20.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="130.0" layoutX="37.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/LogoPrincipal.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="34.0" layoutX="79.0" layoutY="311.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Salir.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="308.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programador">
+         <font>
+            <Font name="Bookman Old Style" size="25.0" />
+         </font>
+      </Text>
+      <Pane layoutX="401.0" layoutY="123.0" prefHeight="43.0" prefWidth="143.0" style="-fx-background-color: #99bbb9;">
+         <children>
+            <Text layoutX="22.0" layoutY="27.0" smooth="false" strokeWidth="0.0" text="Diego Ricardo">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="0.7457044673539519" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="401.0" layoutY="197.0" prefHeight="43.0" prefWidth="143.0" style="-fx-background-color: #99bbb9;">
+         <children>
+            <Text layoutX="10.0" layoutY="27.0" smooth="false" strokeWidth="0.0" text="Alvarez Castañeda">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="0.7457044673539519" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="401.0" layoutY="265.0" prefHeight="43.0" prefWidth="143.0" style="-fx-background-color: #99bbb9;">
+         <children>
+            <Text layoutX="47.0" layoutY="27.0" smooth="false" strokeWidth="0.0" text="IN5BM">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="0.7457044673539519" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="401.0" layoutY="330.0" prefHeight="43.0" prefWidth="143.0" style="-fx-background-color: #99bbb9;">
+         <children>
+            <Text layoutX="41.0" layoutY="27.0" smooth="false" strokeWidth="0.0" text="2022277">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="0.7457044673539519" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="258.0" layoutY="93.0" prefHeight="280.0" prefWidth="143.0" style="-fx-background-color: #647c84;">
+         <children>
+            <Text layoutX="39.0" layoutY="31.0" smooth="false" strokeWidth="0.0" text="Nombres">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="0.7457044673539519" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Text>
+            <Text layoutX="36.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código Técnico">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="44.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carné">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

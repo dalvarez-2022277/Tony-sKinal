@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresaImg" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f0df4b1-92dc-41d7-93f8-af5acde9e6fa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="NUEVA_IMAGEN1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresas
+]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="15" y="0" width="134" height="69" uuid="97ddb344-512c-4546-aa3b-5ee284c7745a">
+					<printWhenExpression><![CDATA[$P{NUEVA_IMAGEN1}]]></printWhenExpression>
+				</reportElement>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="49" y="2" width="100" height="20" uuid="74b2a54e-3572-4392-a698-51ccc9e4db5f"/>
+				<text><![CDATA[codigoEmpresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="2" width="100" height="20" uuid="1c7e19eb-de9e-49f6-8206-3770940f761f"/>
+				<text><![CDATA[nombreEmpresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="2" width="100" height="20" uuid="4e50a595-6c0c-4638-a238-c3c5f80a7dc7"/>
+				<text><![CDATA[direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="2" width="100" height="20" uuid="1284375d-e7b6-4bc1-a490-7328fb546af8"/>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="49" y="57" width="100" height="20" uuid="4e5e8066-fc57-4c26-b7e7-2770bd829627"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="60" width="100" height="20" uuid="c7651843-b1c9-41ed-88cd-80b185c20a34"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="61" width="100" height="20" uuid="3b2d3345-ccda-4df1-a63e-3d8ed0973d4a"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="69" width="100" height="20" uuid="4935685f-051c-435f-9822-5978586bca7f"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

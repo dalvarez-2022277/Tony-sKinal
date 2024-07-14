@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #5e8583;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegoalvarez.controller.EmpresasController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99bbb9" height="271.0" layoutX="287.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 54;" width="271.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#647c84" height="140.0" layoutX="78.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 50; -fx-arc-height: 50;" width="138.0" />
+      <ImageView fitHeight="98.0" fitWidth="114.0" layoutX="98.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Login.png" />
+         </image>
+      </ImageView>
+      <Text fill="#f6fafb" layoutX="62.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login " textAlignment="CENTER" wrappingWidth="170.0">
+         <font>
+            <Font name="Eras Light ITC" size="30.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e6763" height="10.0" layoutX="200.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 400;" width="427.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cbeba" height="10.0" layoutX="373.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 400;" width="249.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#64b4b8" height="10.0" layoutX="497.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 400;" width="122.0" />
+      <TextField layoutX="320.0" layoutY="145.0" promptText="User" />
+   </children>
+</AnchorPane>
